@@ -1,0 +1,4 @@
+#!/bin/sh
+
+"${OPENSHIFT_RAWDOG_DIR}/bin/update"
+
