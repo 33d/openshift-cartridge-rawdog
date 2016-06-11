@@ -1,0 +1,7 @@
+# Run under SCL on openshift
+if [ x"$OPENSHIFT_APP_UUID" != x"" -a "${X_SCLS#*python27}" = "$X_SCLS" ] ; then
+  exec scl enable python27 "$0"
+fi
+
+export PYTHONUSERBASE="$OPENSHIFT_RAWDOG_DIR"
+

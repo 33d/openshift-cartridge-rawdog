@@ -1,12 +1,8 @@
-#!/bin/sh -ex
+#!/bin/bash -ex
 
-# Run under SCL on openshift
-if [ x"$OPENSHIFT_APP_UUID" != x"" -a "${X_SCLS#*python27}" = "$X_SCLS" ] ; then
-  exec scl enable python27 "$0"
-fi
+. ${OPENSHIFT_RAWDOG_DIR}/bin/setenv
 
 export XDG_CACHE_HOME=$(mktemp -d -t cache.XXXXXX)
-export PYTHONUSERBASE="$OPENSHIFT_RAWDOG_DIR"
 WORKDIR=$(mktemp -d -t work.XXXXXX)
 
 die() {
