@@ -2,5 +2,10 @@
 
 . ${OPENSHIFT_RAWDOG_DIR}/bin/setenv
 
-"${OPENSHIFT_RAWDOG_DIR}/bin/rawdog" -uw --dir "$RAWDOG_CONFIG"
+# Process the erb if there's one there
+if [ -e "${RAWDOG_CONFIG}/config.erb" ] ; then
+  erb < "${RAWDOG_CONFIG}/config.erb" > "${RAWDOG_CONFIG}/config"
+fi
+
+"${OPENSHIFT_RAWDOG_DIR}/bin/rawdog" --update --write --dir "$RAWDOG_CONFIG"
 
