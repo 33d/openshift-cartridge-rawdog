@@ -25,3 +25,6 @@ pip install --user feedparser
 install_lib rawdog http://offog.org/files/rawdog-2.21.tar.gz \
     4579cb91812bc76eec1a5b73a953d104a33939c7
 
+# Run an update in case the user configured it, doesn't matter if not
+"${OPENSHIFT_RAWDOG_DIR}/bin/update" || true
+

@@ -4,4 +4,5 @@ if [ x"$OPENSHIFT_APP_UUID" != x"" -a "${X_SCLS#*python27}" = "$X_SCLS" ] ; then
 fi
 
 export PYTHONUSERBASE="$OPENSHIFT_RAWDOG_DIR"
+export RAWDOG_CONFIG=${RAWDOG_CONFIG:=${OPENSHIFT_REPO_DIR}/.rawdog}
 

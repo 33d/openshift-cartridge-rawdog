@@ -1,0 +1,6 @@
+#!/bin/bash -ex
+
+. ${OPENSHIFT_RAWDOG_DIR}/bin/setenv
+
+"${OPENSHIFT_RAWDOG_DIR}/bin/rawdog" -uw --dir "$RAWDOG_CONFIG"
+
