@@ -1,0 +1,12 @@
+Name: Rawdog
+Cartridge-Short-Name: RAWDOG
+Cartridge-Version: '0.0.1'
+Compatible-Versions:
+  - '0.0.1'
+Cartridge-Vendor: me
+Display-Name: Rawdog feed aggregator
+Version: '2.21'
+Versions:
+  - '2.21'
+License: "GPL v2"
+
