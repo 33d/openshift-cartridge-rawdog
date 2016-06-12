@@ -1,10 +1,15 @@
 #!/bin/sh -e
 
+update() {
+  # Ignore the return status, in case Rawdog isn't configured yet
+  "${OPENSHIFT_RAWDOG_DIR}/bin/update" || true
+}
+
 case "%1" in
-  start) ;;
+  start) update ;;
   stop) ;;
-  restart) ;;
-  reload) ;;
+  restart) update ;;
+  reload) update ;;
   *) exit 0
 esac
 
